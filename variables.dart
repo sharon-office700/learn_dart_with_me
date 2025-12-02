@@ -1,3 +1,5 @@
+late var outsideMain;
+
 void main() {
   
   // cannot be null or else will cause run time error
@@ -27,5 +29,27 @@ void main() {
   // print(sample2);  this will throw error , hence  ...
   sample2 = '';
   print('***' + sample2 + '***');  // output: ******
+
+  int some_int;
+  some_int = 12;
+  // print('printing some interger value here : ' + some_int); -> yaha pe error throw hoga bcoz dart ek strongly typed language hai , pehle value string hai toh next bhi string expect karta hai 
+
+  print('printing using the .toString() method'+ some_int.toString()); //lekin ye tareeka thoda jyafa over the top hai 
+
+  print('print using the recommended string interpolation method: $some_int') ;
+  // is python k f string k tarah hai , e.g; f"the is the string : {value}"
+  // bas farak ye hai ki values inject jaha kar raha ho usko $ ke saath use karo instead of curly braces
+
+  outsideMain = 12;
+  print('outsideMain:  $outsideMain');
+
+  // koi variables use nhi karna ho ya ignore karna hai toh _ mein daal sakte ho just like golang
+  var _ = 'something wierd here ';
+  String _ = 'even more wierd'; 
+
+  for (var _ in [1,2,4,5]) {
+    print('we are ignoring the item and printing ');
+  }
+
 
 }
