@@ -77,6 +77,7 @@ void main() {
 ! <--	Not-null assertion operator 	Casts an expression to its underlying non-nullable type, throwing a runtime exception if the cast fails; example: foo!.bar asserts foo is non-null and selects the property bar , unless foo is null (in which case a runtime exception is thrown) 
   */
 /// heir ist ein example fur documented comment, es kann auch include classname, methods, variables, object etc wann placed im dei [] bracket
+/// 
 /// [main] 
 /// [playerName]
 }
