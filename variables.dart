@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 late var outsideMain;
 
 void main() {
@@ -51,5 +53,15 @@ void main() {
     print('we are ignoring the item and printing ');
   }
 
+  var _ = 'something';  // these 2 will be ignore 
+  int _ = 12;
 
+  var _ = do_something();  // if you want to perform an action via a function and don't want the return value than you can use
+  // wenn du brauche einen action durfurhen von ein function aber magst die value nicht, dan verwenden sie das _ , das willst ignore die output von der function 
+}
+
+
+int do_something() {
+  print('performed some action and returned an int');
+  return 33;
 }
