@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 late var outsideMain;
 
