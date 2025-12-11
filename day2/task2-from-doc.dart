@@ -1,5 +1,4 @@
 // Part 1
-import 'dart:math';
 
 addHello(String user) {
   return "Hello $user";
