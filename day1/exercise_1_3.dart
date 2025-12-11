@@ -12,7 +12,7 @@ List<T> Function(List<T>) createFilter<T>(bool Function(T) predicate) {
 int Function(int) applyTimes(int Function(int) fn, int times) {
   // Your code here
   return (int_return) {
-    return (int_return * times);
+    return (fn(int_return) * times);
   };
 }
 
@@ -42,7 +42,7 @@ void main() {
   // Test applyTimes
   var double = (int n) => n * 2;
   var quadruple = applyTimes(double, 2);
-  print(quadruple(3));  // 12
+  print("============> ${quadruple(3)}");  // 12
 
   // Test compose
   var addOne = (int n) => n + 1;
