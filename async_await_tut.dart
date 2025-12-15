@@ -38,9 +38,8 @@
 //   }
 // }
 
-// async k liye return type mention nhi kiya toh dart automatically usse Future mein erap karke de dega , for example async_func() => "some string" ka return type string ko wrap karke Future<string> kar dega agar explicitly String mention kiya hai and return kuch aur kiya toh conflict mein error throw hoga
+// async k liye return type mention nhi kiya toh dart automatically usse Future mein wrap karke de dega , for example async_func() => "some string" ka return type string ko wrap karke Future<string> kar dega agar explicitly String mention kiya hai and return kuch aur kiya toh conflict mein error throw hoga
 
-import 'future_tut.dart';
 
 return_string() async {
   print("print from return_str function ");
