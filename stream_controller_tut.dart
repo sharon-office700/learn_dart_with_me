@@ -7,7 +7,7 @@ Stream<int> counter_with_error_and_continue(int nums) {
   void generate() async {
     for (var i = 1; i <= nums; i++) {
       // 50ms का delay डालें ताकि Asynchronous execution स्पष्ट हो
-      await Future.delayed(Duration(milliseconds: 50)); 
+      await Future.delayed(Duration(milliseconds: 50), () => print("printing from the future block here +++++++")); 
 
       if (i == 4) {
         // 2. error भेजें (Stream को बंद किए बिना)
@@ -58,3 +58,17 @@ void main() async {
     cancelOnError: false,
   );
 }
+
+
+/*
+
+chahe tum async* use karke streams bhejo ya stream controller ka use karo 
+
+and input recieve karne k liye tum listen bhi kar sakte ho and "await for" ko use karke bhi input le sakte ho
+
+// async* use kiya toh stream controller use karne ki zaroorat nahi hai , async* se kaam ho jaayga but dhyaan rahe async* se value tum ek generator se bhejoge and use generator mein koi error/Excepiton throw hua toh generator band ho jaata hai even though tum use catch karke handle kar lo 
+
+tumhara try-catch block synchronous code ka error handle kar sakta hai agar asynchronous data ka error and exception handle karna hai toh .listen() ki tarah .onError() method use karo and .cancelOnError property ko "false"  kar do toh <--- ye by default true rehta hai, 
+isko false kiya toh stream error k baad bhi data bhejega and cancel nhi hoga
+
+*/
