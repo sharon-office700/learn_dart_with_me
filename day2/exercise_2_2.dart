@@ -21,14 +21,17 @@ class UIEvent {
 
 // TODO: Implement the EventEmitter class
 class EventEmitter {
-  // TODO: Create a broadcast StreamController for UIEvent
 
   // Public stream getter
   Stream<UIEvent> get events => throw UnimplementedError();
 
+  // TODO: Create a broadcast StreamController for UIEvent
+  final stream_controller_b = StreamController.broadcast();
+
   // Emit an event
   void emit(UIEvent event) {
     // Your code here
+    stream_controller_b.add(event);
   }
 
   // Convenience methods
